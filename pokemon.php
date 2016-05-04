@@ -41,17 +41,17 @@
     if (isset($_POST['pokemon']) and $_POST['pokemon'] != 'Dragonite' and $_POST['pokemon'] != ''){
       echo "<br>";
       echo "<p class=\"text-center\">Wrong! <br> Dragonite is the best Pokemon!";
-      echo "<img class=\"img-responsive center-block\"  src=\"Dragonitesad.png\" title=\"Look you made him sad!\">";
+      echo "<img class=\"img-responsive center-block\"  src=\"./Dragonitesad.png\" title=\"Look you made him sad!\">";
     }
     if (isset($_POST['pokemon']) and $_POST['pokemon'] == ''){
       echo "<br>";
       echo "<p class=\"text-center\">Please Enter a Pokemon";
-      echo "<img class=\"img-responsive center-block\"  src=\"Rocket.png\" title=\"What are you team Rocket?\">";
+      echo "<img class=\"img-responsive center-block\"  src=\"./Rocket.png\" title=\"What are you team Rocket?\">";
     }
     if (isset($_POST['pokemon']) and $_POST['pokemon'] == 'Dragonite'){
       echo "<br>";
       echo "<p class=\"text-center\">You are right!";
-      echo "<img class=\"img-responsive center-block\" width=\"500\"  src=\"Dragonite.png\" title=\"You sure know your Pokemon!\">";
+      echo "<img class=\"img-responsive center-block\" width=\"500\"  src=\"./Dragonite.png\" title=\"You sure know your Pokemon!\">";
     }
 
 

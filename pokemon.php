@@ -35,7 +35,7 @@
     <button type="submit" class="btn btn-default">Submit</button>
 
 
-    </html>
+
 
     <?php
     if (isset($_POST['pokemon']) and $_POST['pokemon'] != 'Dragonite' and $_POST['pokemon'] != ''){
@@ -56,3 +56,4 @@
 
 
     ?>
+  </html>

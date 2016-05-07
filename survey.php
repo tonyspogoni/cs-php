@@ -87,6 +87,7 @@
     <label><input type="radio" name="yesno" value="No ">No</label>
   </div>
   <button type="submit" class="btn btn-default">Submit</button>
+  <a href="results.php" class="btn btn-info" role="button">See Results</a>
 </form>
 
 

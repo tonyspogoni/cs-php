@@ -43,20 +43,20 @@
 	<h1>Pokemon</h1>
 	<ul>
 		<?php
-		$stmt = $db->prepare('SELECT title from movie where id=:id');
+		$stmt = $db->prepare('SELECT name from pokemon where id=:id');
 		$stmt->bindValue(':id', 2, PDO::PARAM_INT);
 		$stmt->execute();
 		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 		echo "<h3>Using the statement thing </h3>";
 		foreach ($rows as $row)
 		{
-		echo '<li>' . $row['title'] . "</li><br />";
+		echo '<li>' . $row['name'] . "</li><br />";
 		}
 
 		echo "<h3>All data in movie table</h3>";
-		foreach ($db->query('SELECT * FROM movie') as $row)
+		foreach ($db->query('SELECT * FROM pokemon') as $row)
 		{
-		echo '<li>' . $row['title'] . "</li><br />";
+		echo '<li>' . $row['name'] . "</li><br />";
 		}
 
 		?>

@@ -69,7 +69,9 @@ try {
 
 		foreach ($db->query('SELECT Name FROM Pokemon') as $row)
 		{
-			echo '<li>' $row['Name'] "</li><br />";
+			echo '<li>';
+			echo $row['Name']; 
+			echo "</li><br />";
 
 			echo '<br />';
 		}

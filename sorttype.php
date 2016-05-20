@@ -71,6 +71,7 @@ try {
 
 		<?php
 		$pType = ($_POST["pType"]);
+		echo $pType;
 		echo "<div class=\"container\">";
 		echo "<table class=\"table table-bordered\">";
 		echo    "<thead>";

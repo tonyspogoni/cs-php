@@ -79,17 +79,17 @@ try {
 		echo  	"<th>Pokedex Number</th>";
 		echo  	"<th>Type</th>";
 		echo	 	"</tr>";
-
+		echo		"</thead>";
 		//foreach ($db->query('SELECT Name, pokedexNum FROM Pokemon') as $row)
 		foreach	($db->query('SELECT * FROM Pokemon p JOIN Pokemon_Type pt ON p.ID = pt.POKEMON_ID JOIN Type t ON pt.TYPE_ID = t.ID') as $row)
 		{
 
-    	echo		"</thead>";
+
     	echo 	  "<tbody>";
       echo		"<tr>";
       echo    "<td>" . $row['Name'] . "</td>";
       echo    "<td>" . $row['pokedexNum'] . "</td>";
-      echo    "<td>" . $row['pt.POKEMON_ID'] . "</td>";
+      echo    "<td>" . $row['TYPE] . "</td>";
       echo		"</tr>";
 
 

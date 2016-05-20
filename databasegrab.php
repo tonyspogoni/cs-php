@@ -90,14 +90,17 @@ try {
       echo    "<td>" . $row['pokedexNum'] . "</td>";
       echo    "<td>john@example.com</td>";
       echo		"</tr>";
-      echo    "</tbody>";
-      echo    "</table>";
-      echo    "</div>";
+
 
 
 
 
 		}
+
+		echo    "</tbody>";
+		echo    "</table>";
+		echo    "</div>";
+
 		?>
 
 

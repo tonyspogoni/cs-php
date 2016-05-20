@@ -75,12 +75,13 @@ try {
 		echo "<table class=\"table table-striped\">";
 		echo    "<thead>";
 		echo		"<tr>";
-		echo  	"<th><button type="button" class="btn btn-primary">Pokemon</button></th>";
-		echo  	"<th><button type="button" class="btn btn-primary">pokedexNum</button></th>";
-		echo  	"<th><button type="button" class="btn btn-primary">Type</button></th>";
+		echo  	"<th>Pokemon</th>";
+		echo  	"<th>Pokedex Number</th>";
+		echo  	"<th>Type</th>";
 		echo	 	"</tr>";
 
-		foreach ($db->query('SELECT Name, pokedexNum FROM Pokemon') as $row)
+		//foreach ($db->query('SELECT Name, pokedexNum FROM Pokemon') as $row)
+		foreach	($db->query('SELECT * FROM Pokemon p JOIN Pokemon_Type pt ON p.ID = pt.POKEMON_ID JOIN Type t ON pt.TYPE_ID = t.ID') as $row)
 		{
 
     	echo		"</thead>";

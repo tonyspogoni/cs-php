@@ -61,8 +61,13 @@ try {
 			</ul>
 		</div>
 	</nav>
+	<div class ="jumbotron">
+
+
 	<h1>Pokemon</h1>
 	<ul>
+
+
 		<?php
 
 
@@ -70,13 +75,13 @@ try {
 		foreach ($db->query('SELECT Name FROM Pokemon') as $row)
 		{
 			echo '<li>';
-			echo $row['Name']; 
+			echo $row['Name'];
 			echo "</li><br />";
 
 			echo '<br />';
 		}
 		?>
 		<ul>
-
+  </div>
 		</body>
 		</html>

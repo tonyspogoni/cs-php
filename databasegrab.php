@@ -100,16 +100,21 @@ try {
 		echo    "</div>";
 
 		?>
+		<div class="container">
+		  <h2>Item to sort by</h2>
+		  <div class="btn-group">
+		    <button type="button" class="btn btn-primary">Choose a Topic to show!</button>
+		    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+		      <span class="caret"></span>
+		    </button>
+		    <ul class="dropdown-menu" role="menu">
+		      <li><a href="http://php-tonyspogoni.rhcloud.com/sortname.php">Name</a></li>
+		      <li><a href="http://php-tonyspogoni.rhcloud.com/sorttype.php">Type</a></li>
+					<li><a href="http://php-tonyspogoni.rhcloud.com/sortdex.php">Pokedex Number</a></li>
+					<li><a href="#">WEAKNESS NOT WORKING BECAUSE I AM LAZY</a></li>
+		    </ul>
+		  </div>
+		</div>
 
-  <form role="form" method="POST" action="sorttype.php" >
-		<div class="form-group">
-	    <label for="sel1">Select list:</label>
-	    <select name="pType">
-	      <option>Dragon</option>
-	      <option>Flying</option>
-
-	    </select>
-	  </div>
-<button type="submit" class="btn btn-default">Submit</button>
 		</body>
 		</html>

@@ -98,11 +98,6 @@ try {
 		echo    "</tbody>";
 		echo    "</table>";
 		echo    "</div>";
-		}
-
-		echo    "</tbody>";
-		echo    "</table>";
-		echo    "</div>";
 
 		?>
 

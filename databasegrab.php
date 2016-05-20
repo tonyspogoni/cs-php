@@ -101,7 +101,7 @@ try {
 
 		?>
 		<div class="container">
-		  <h2>Split Buttons</h2>
+		  <h2>Item to sort by</h2>
 		  <div class="btn-group">
 		    <button type="button" class="btn btn-primary">Choose a Topic to show!</button>
 		    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">

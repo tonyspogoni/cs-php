@@ -73,10 +73,11 @@ try {
 
 
 
-		foreach ($db->query('SELECT Name FROM Pokemon') as $row)
+		foreach ($db->query('SELECT Name, pokedexNum FROM Pokemon') as $row)
 		{
 			echo '<li>';
 			echo $row['Name'];
+			echo $row['pokedexNum'];
 			echo "</li><br />";
 
 			echo '<br />';

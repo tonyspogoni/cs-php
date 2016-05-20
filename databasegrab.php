@@ -43,25 +43,13 @@
 	<h1>Pokemon</h1>
 	<ul>
 		<?php
-	//	$stmt = $db->prepare('SELECT Name from pokemon where id=:id');
-	//	$stmt->bindValue(':id', 2, PDO::PARAM_INT);
-	//	$stmt->execute();
-	//	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-	//	echo "<h3>Using the statement thing </h3>";
-	//	foreach ($rows as $row)
-	//	{
-	//	echo '<li>' . $row['Name'] . "</li><br />";
-	//	}
 
-	//	echo "<h3>All data in Pokemon table</h3>";
-	//	foreach ($db->query('SELECT * FROM pokemon') as $row)
-	//	{
-	//	echo '<li>' . $row['Name'] . "</li><br />";
-	//	}
+
 
 	foreach ($db->query('SELECT Name FROM Pokemon') as $row)
 {
-   echo 'user: ' . $row['Name'];
+	 echo '<li>' $row['Name']; "</li><br />";
+
    echo '<br />';
 }
 		?>

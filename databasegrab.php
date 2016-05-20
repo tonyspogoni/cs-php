@@ -66,7 +66,7 @@ try {
 
 	<h1>Pokemon</h1>
 	</div>
-	<ul>
+
 
 
 		<?php
@@ -75,15 +75,43 @@ try {
 
 		foreach ($db->query('SELECT Name, pokedexNum FROM Pokemon') as $row)
 		{
-			echo '<li>';
-			echo $row['Name'];
+			echo "<div class=\"container\">";
+      echo "<h2>Striped Rows</h2>";
+      echo "<p>The .table-striped class adds zebra-stripes to a table:</p>";
+      echo "<table class=\"table table-striped\">";
+    	echo    "<thead>";
+      echo		"<tr>";
+      echo  	"<th>Firstname</th>";
+      echo  	"<th>Lastname</th>";
+      echo  	"<th>Email</th>";
+      echo	 	"</tr>";
+    	echo		"</thead>";
+    	echo 	  "<tbody>";
+      echo		"<tr>";
+      echo    "<td>John</td>";
+      echo    "<td>Doe</td>";
+      echo    "<td>john@example.com</td>";
+      echo		"</tr>";
+      echo    "<tr>";
+      echo    "<td>Mary</td>";
+      echo    "<td>Moe</td>";
+      echo    "<td>mary@example.com</td>";
+      echo    "</tr>";
+      echo    "<tr>";
+      echo    "<td>July</td>";
+      echo    "<td>Dooley</td>";
+      echo    "<td>july@example.com</td>";
+      echo    "</tr>";
+      echo    "</tbody>";
+      echo    "</table>";
+      echo    "</div>";
+			echo $row['Name'] . ' ';
 			echo $row['pokedexNum'];
-			echo "</li><br />";
 
-			echo '<br />';
+
 		}
 		?>
-		<ul>
+
 
 		</body>
 		</html>

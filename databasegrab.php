@@ -65,6 +65,7 @@ try {
 
 
 	<h1>Pokemon</h1>
+	</div>
 	<ul>
 
 
@@ -82,6 +83,6 @@ try {
 		}
 		?>
 		<ul>
-  </div>
+
 		</body>
 		</html>

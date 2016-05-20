@@ -50,13 +50,13 @@
 		echo "<h3>Using the statement thing </h3>";
 		foreach ($rows as $row)
 		{
-		echo '<li>' . $row['name'] . "</li><br />";
+		echo '<li>' . $row['Name'] . "</li><br />";
 		}
 
-		echo "<h3>All data in movie table</h3>";
+		echo "<h3>All data in Pokemon table</h3>";
 		foreach ($db->query('SELECT * FROM pokemon') as $row)
 		{
-		echo '<li>' . $row['name'] . "</li><br />";
+		echo '<li>' . $row['Name'] . "</li><br />";
 		}
 
 		?>

@@ -64,7 +64,7 @@ try {
 	<div class ="jumbotron">
 
 
-	<h1>Pokemon NAMES!</h1>
+	<h1>Pokemon Types!</h1>
 	</div>
 
 
@@ -76,19 +76,28 @@ try {
 		echo    "<thead>";
 		echo		"<tr>";
 		echo  	"<th>Pokedex Number</th>";
+		echo  	"<th>Pokemon</th>";
+		echo  	"<th>Type</th>";
 		echo	 	"</tr>";
 		echo		"</thead>";
 		//foreach ($db->query('SELECT Name, pokedexNum FROM Pokemon') as $row)
-		foreach	($db->query('SELECT pokedexNum FROM Pokemon ORDER BY pokedexNum') as $row)
+		foreach	($db->query('SELECT * FROM Pokemon p JOIN Pokemon_Type pt ON p.ID = pt.POKEMON_ID JOIN Type t ON pt.TYPE_ID = t.ID ORDER BY pokedexNum') as $row)
 		{
 
 
     	echo 	  "<tbody>";
       echo		"<tr>";
-      echo    "<td>" . $row['pokedexNum'] . "</td>";
+			echo    "<td>" . $row['pokedexNum'] . "</td>";
+			echo    "<td>" . $row['Name'] . "</td>";
+      echo    "<td>" . $row['TYPE'] . "</td>";
       echo		"</tr>";
 
 
+		}
+
+		echo    "</tbody>";
+		echo    "</table>";
+		echo    "</div>";
 		}
 
 		echo    "</tbody>";

@@ -81,14 +81,16 @@ try {
 		echo	 	"</tr>";
 		echo		"</thead>";
 		//foreach ($db->query('SELECT Name, pokedexNum FROM Pokemon') as $row)
-		foreach	($db->query('SELECT Name FROM Pokemon ORDER BY Name') as $row)
+		foreach	($db->query('SELECT * FROM Pokemon p JOIN Pokemon_Type pt ON p.ID = pt.POKEMON_ID JOIN Type t ON pt.TYPE_ID = t.ID ORDER BY Name') as $row)
 		{
 
 
-    	echo 	  "<tbody>";
-      echo		"<tr>";
-      echo    "<td>" . $row['Name'] . "</td>";
-      echo		"</tr>";
+			echo 	  "<tbody>";
+			echo		"<tr>";
+			echo    "<td>" . $row['Name'] . "</td>";
+			echo    "<td>" . $row['pokedexNum'] . "</td>";
+			echo    "<td>" . $row['TYPE'] . "</td>";
+			echo		"</tr>";
 
 
 		}
@@ -96,7 +98,6 @@ try {
 		echo    "</tbody>";
 		echo    "</table>";
 		echo    "</div>";
-
 		?>
 
 		</body>

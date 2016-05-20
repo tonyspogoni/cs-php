@@ -75,9 +75,9 @@ try {
 		echo "<table class=\"table table-striped\">";
 		echo    "<thead>";
 		echo		"<tr>";
-		echo  	"<th>Pokemon</th>";
-		echo  	"<th>Pokedex Number</th>";
-		echo  	"<th>Type</th>";
+		echo  	"<th><button type="button" class="btn btn-primary">Pokemon</button></th>";
+		echo  	"<th><button type="button" class="btn btn-primary">pokedexNum</button></th>";
+		echo  	"<th><button type="button" class="btn btn-primary">Type</button></th>";
 		echo	 	"</tr>";
 
 		foreach ($db->query('SELECT Name, pokedexNum FROM Pokemon') as $row)

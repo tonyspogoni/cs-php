@@ -58,7 +58,8 @@
 	//	{
 	//	echo '<li>' . $row['Name'] . "</li><br />";
 	//	}
-	foreach ($db->query('SELECT Name FROM pokemon') as $row)
+
+	foreach ($db->query('SELECT Name FROM Pokemon') as $row)
 {
    echo 'user: ' . $row['Name'];
    echo '<br />';

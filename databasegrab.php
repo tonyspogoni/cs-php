@@ -43,7 +43,7 @@
 	<h1>Pokemon</h1>
 	<ul>
 		<?php
-		$stmt = $db->prepare('SELECT name from pokemon where id=:id');
+		$stmt = $db->prepare('SELECT Name from pokemon where id=:id');
 		$stmt->bindValue(':id', 2, PDO::PARAM_INT);
 		$stmt->execute();
 		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);

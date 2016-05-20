@@ -89,7 +89,7 @@ try {
       echo		"<tr>";
       echo    "<td>" . $row['Name'] . "</td>";
       echo    "<td>" . $row['pokedexNum'] . "</td>";
-      echo    "<td>" . $row['TYPE] . "</td>";
+      echo    "<td>" . $row['TYPE'] . "</td>";
       echo		"</tr>";
 
 

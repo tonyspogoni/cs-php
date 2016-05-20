@@ -86,8 +86,8 @@ try {
     	echo		"</thead>";
     	echo 	  "<tbody>";
       echo		"<tr>";
-      echo $row['Name'];
-      echo $row['pokedexNum'];
+      echo    "<td>" . $row['Name'] . "</td>";
+      echo    "<td>" . $row['pokedexNum'] . "</td>";
       echo    "<td>john@example.com</td>";
       echo		"</tr>";
       echo    "</tbody>";

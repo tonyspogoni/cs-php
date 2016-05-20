@@ -82,7 +82,7 @@ try {
 		echo	 	"</tr>";
 		echo		"</thead>";
 		//foreach ($db->query('SELECT Name, pokedexNum FROM Pokemon') as $row)
-		foreach	($db->query('SELECT * FROM Pokemon p JOIN Pokemon_Type pt ON p.ID = pt.POKEMON_ID JOIN Type t ON pt.TYPE_ID = t.ID WHERE TYPE = $pType ORDER BY TYPE') as $row)
+		foreach	($db->query('SELECT * FROM Pokemon p JOIN Pokemon_Type pt ON p.ID = pt.POKEMON_ID JOIN Type t ON pt.TYPE_ID = t.ID WHERE TYPE = '$pType' ORDER BY TYPE') as $row)
 		{
 
 

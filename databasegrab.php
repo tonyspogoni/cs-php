@@ -72,7 +72,7 @@ try {
 		<?php
 
 		echo "<div class=\"container\">";
-		echo "<table class=\"table table-striped\">";
+		echo "<table class=\"table table-bordered\">";
 		echo    "<thead>";
 		echo		"<tr>";
 		echo  	"<th>Pokemon</th>";
@@ -100,7 +100,11 @@ try {
 		echo    "</div>";
 
 		?>
-
+		<div class="btn-group">
+	   <button type="button" class="btn btn-primary">Type</button>
+	   <button type="button" class="btn btn-primary">Pokemon</button>
+	   <button type="button" class="btn btn-primary">Weakness</button>
+	 </div>
 
 		</body>
 		</html>

@@ -64,7 +64,7 @@ try {
 	<div class ="jumbotron">
 
 
-	<h1>Pokemon</h1>
+	<h1>Pokemon NAMES!</h1>
 	</div>
 
 
@@ -81,15 +81,13 @@ try {
 		echo	 	"</tr>";
 		echo		"</thead>";
 		//foreach ($db->query('SELECT Name, pokedexNum FROM Pokemon') as $row)
-		foreach	($db->query('SELECT * FROM Pokemon p JOIN Pokemon_Type pt ON p.ID = pt.POKEMON_ID JOIN Type t ON pt.TYPE_ID = t.ID') as $row)
+		foreach	($db->query('SELECT Name FROM Pokemon ORDER BY Name') as $row)
 		{
 
 
     	echo 	  "<tbody>";
       echo		"<tr>";
       echo    "<td>" . $row['Name'] . "</td>";
-      echo    "<td>" . $row['pokedexNum'] . "</td>";
-      echo    "<td>" . $row['TYPE'] . "</td>";
       echo		"</tr>";
 
 
@@ -100,21 +98,6 @@ try {
 		echo    "</div>";
 
 		?>
-		<div class="container">
-		  <h2>Split Buttons</h2>
-		  <div class="btn-group">
-		    <button type="button" class="btn btn-primary">Choose a Topic to show!</button>
-		    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-		      <span class="caret"></span>
-		    </button>
-		    <ul class="dropdown-menu" role="menu">
-		      <li><a href="http://php-tonyspogoni.rhcloud.com/sortname.php">Name</a></li>
-		      <li><a href="http://php-tonyspogoni.rhcloud.com/sorttype.php">Type</a></li>
-					<li><a href="http://php-tonyspogoni.rhcloud.com/sortdex.php">Pokedex Number</a></li>
-					<li><a href="#">WEAKNESS NOT WORKING BECAUSE I AM LAZY</a></li>
-		    </ul>
-		  </div>
-		</div>
 
 		</body>
 		</html>

@@ -9,6 +9,7 @@ $stmt = $db->prepare($query);
 $stmt->bindValue(":name", $name, PDO::PARAM_STR);
 $stmt->bindValue(":pokedexNum", $pokedexNum, PDO::PARAM_INT);
 $stmt->execute();
+echo "got er done";
 header("Location: databasegrab.php");
 die("Page should have been redirected");
 

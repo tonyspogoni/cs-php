@@ -122,7 +122,7 @@ try {
 		<input type="text" name="name" placeholder="Name"></input>
 		<input type="text" name="type" placeholder="Type"></input>
 		<input type="text" name="pokedexNum" placeholder="Pokedex Number"></input>
-		<input type="submit" value="Add Movie"></input>
+		<input type="submit" value="Add a Pokemon"></input>
 	</form>
 
 		</body>

@@ -54,7 +54,7 @@ $stmt2 = $db->prepare($query2);
 $stmt2->bindValue(":type", $type, PDO::PARAM_STR);
 $stmt2->execute();
 $query3 = "INSERT INTO Pokemon_Type(POKEMON_ID) SELECT ID FROM Pokemon WHERE name = :name";
-$stmt3 = $db->prepare($query2);
+$stmt3 = $db->prepare($query3);
 $stmt3->bindValue(":name", $name, PDO::PARAM_STR);
 $stmt3->execute();
 

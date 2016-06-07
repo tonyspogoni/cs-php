@@ -44,7 +44,7 @@ try {
 $name = htmlspecialchars($_POST['name']);
 $type = htmlspecialchars($_POST['type']);
 $pokedexNum = htmlspecialchars($_POST['pokedexNum']);
-$query = "INSERT INTO Pokemon(Name, pokedexNum) VALUES (:name, :pokedexNum)"; "INSERT INTO Pokemon_Type (TYPE_ID,POKEMON_ID) SELECT t.ID, p.ID from Pokemon p INNER JOIN Type t on pt.POKEMON_ID = p.ID INNER JOIN Pokemon_Type pt on pt.POKEMON_ID = t.ID ";
+$query = "INSERT INTO Pokemon(Name, pokedexNum) VALUES (:name, :pokedexNum)"; "INSERT INTO Pokemon_Type (TYPE_ID,POKEMON_ID) SELECT t.ID, p.ID from Pokemon p INNER JOIN Type t on pt.POKEMON_ID = p.ID WHERE p.Name = :name INNER JOIN Pokemon_Type pt on pt.POKEMON_ID = t.ID WHERE t.Tpye = :type ";
 //$query2 = "INSERT INTO Pokemon_Type(TYPE_ID,POKEMON_ID) SELECT	(SELECT ID FROM Type WHERE TYPE = :type) SELECT (ID FROM Pokemon WHERE Name = :name )";
 $stmt = $db->prepare($query);
 $stmt->nextRowset();

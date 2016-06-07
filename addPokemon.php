@@ -47,6 +47,7 @@ $pokedexNum = htmlspecialchars($_POST['pokedexNum']);
 $query = "INSERT INTO Pokemon(Name, pokedexNum) VALUES (:name, :pokedexNum)";
 $stmt = $db->prepare($query);
 $stmt->bindValue(":name", $name, PDO::PARAM_STR);
+$stmt->bindValue(":type", $type, PDO::PARAM_STR);
 $stmt->bindValue(":pokedexNum", $pokedexNum, PDO::PARAM_INT);
 $stmt->execute();
 $query2 = "SELECT t.ID, p.ID from Pokemon p

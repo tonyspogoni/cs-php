@@ -64,7 +64,7 @@ try {
 	<div class ="jumbotron">
 
 
-	<h1>Pokemon NAMES!</h1>
+	<h1>Pokemon Names!</h1>
 	</div>
 
 
@@ -78,6 +78,7 @@ try {
 		echo  	"<th>Pokemon</th>";
 		echo  	"<th>Pokedex Number</th>";
 		echo  	"<th>Type</th>";
+		echo  	"<th>Score</th>";
 		echo	 	"</tr>";
 		echo		"</thead>";
 		//foreach ($db->query('SELECT Name, pokedexNum FROM Pokemon') as $row)
@@ -85,11 +86,15 @@ try {
 		{
 
 
+
+			$score =	$row['voteUps'] - $row['voteDowns'];
 			echo 	  "<tbody>";
 			echo		"<tr>";
 			echo    "<td>" . $row['Name'] . "</td>";
 			echo    "<td>" . $row['pokedexNum'] . "</td>";
 			echo    "<td>" . $row['TYPE'] . "</td>";
+			echo    "<td>" . $score . "</td>";
+
 			echo		"</tr>";
 
 
@@ -99,6 +104,26 @@ try {
 		echo    "</table>";
 		echo    "</div>";
 		?>
-
+		<div class="container">
+			<h2>Item to sort by</h2>
+			<div class="btn-group">
+				<button type="button" class="btn btn-primary">Choose a Topic to sort by</button>
+				<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="http://php-tonyspogoni.rhcloud.com/sortname.php">Name</a></li>
+					<li><a href="http://php-tonyspogoni.rhcloud.com/sorttype.php">Type</a></li>
+					<li><a href="http://php-tonyspogoni.rhcloud.com/sortdex.php">Pokedex Number</a></li>
+				</ul>
+			</div>
+		</div>
+		<br>
+				<form action="addPokemon.php" method="POST">
+					<input type="text" name="name" placeholder="Name"></input>
+					<input type="text" name="type" placeholder="Type"></input>
+					<input type="text" name="pokedexNum" placeholder="Pokedex Number"></input>
+					<input type="submit" value="Add a Pokemon"></input>
+				</form>
 		</body>
 		</html>

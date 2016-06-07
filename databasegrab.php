@@ -75,6 +75,7 @@ try {
 		echo "<table class=\"table table-bordered\">";
 		echo    "<thead>";
 		echo		"<tr>";
+		echo  	"<th>Score</th>";
 		echo  	"<th>Pokemon</th>";
 		echo  	"<th>Pokedex Number</th>";
 		echo  	"<th>Type</th>";
@@ -84,13 +85,14 @@ try {
 		foreach	($db->query('SELECT * FROM Pokemon p JOIN Pokemon_Type pt ON p.ID = pt.POKEMON_ID JOIN Type t ON pt.TYPE_ID = t.ID') as $row)
 		{
 
-
+		$score =	$row['voteUps'] - $row['voteDowns'];
     	echo 	  "<tbody>";
       echo		"<tr>";
-      echo    "<td>" . $row['Name'] . "</td>";
+			echo    "<td>" . $score . "</td>";
+			echo    "<td>" . $row['Name'] . "</td>";
       echo    "<td>" . $row['pokedexNum'] . "</td>";
       echo    "<td>" . $row['TYPE'] . "</td>";
-      echo		"</tr>";
+			echo		"</tr>";
 
 
 		}
@@ -103,7 +105,7 @@ try {
 		<div class="container">
 		  <h2>Item to sort by</h2>
 		  <div class="btn-group">
-		    <button type="button" class="btn btn-primary">Choose a Topic to show!</button>
+		    <button type="button" class="btn btn-primary">Choose a Topic to sort by</button>
 		    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
 		      <span class="caret"></span>
 		    </button>
@@ -111,12 +113,11 @@ try {
 		      <li><a href="http://php-tonyspogoni.rhcloud.com/sortname.php">Name</a></li>
 		      <li><a href="http://php-tonyspogoni.rhcloud.com/sorttype.php">Type</a></li>
 					<li><a href="http://php-tonyspogoni.rhcloud.com/sortdex.php">Pokedex Number</a></li>
-					<li><a href="#">WEAKNESS NOT WORKING BECAUSE I AM LAZY</a></li>
 		    </ul>
 		  </div>
 		</div>
 
-
+<br>
 
 	<form action="addPokemon.php" method="POST">
 		<input type="text" name="name" placeholder="Name"></input>

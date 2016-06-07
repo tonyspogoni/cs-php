@@ -48,13 +48,21 @@ $query = "INSERT INTO Pokemon(Name, pokedexNum) VALUES (:name, :pokedexNum)";
 $stmt = $db->prepare($query);
 $stmt->bindValue(":name", $name, PDO::PARAM_STR);
 $stmt->bindValue(":pokedexNum", $pokedexNum, PDO::PARAM_INT);
-//$stmt->bindValue(":type", $type, PDO::PARAM_STR);
 $stmt->execute();
-$query2 = "INSERT INTO Pokemon_Type (TYPE_ID,POKEMON_ID) SELECT t.ID, p.ID from Pokemon p INNER JOIN Type t on pt.TYPE_ID = t.ID INNER JOIN Pokemon_Type pt on pt.POKEMON_ID = p.ID WHERE p.Name = ':name' AND t.TYPE = ':type' ";
-$stmt2 = $db->prepare($query2);
+$query2 = "SELECT t.ID, p.ID from Pokemon p
+INNER JOIN Type t on pt.POKEMON_TYPE = t.ID
+INNER JOIN Pokemon_Type pt on pt.POKEMON_ID = t.ID
+WHERE t.TYPE = :type AND  p.Name = :name";
+$stmt2 = $db->query($query2);
+$row = $stmt2->fetch(PDO::FETCH_ASSOC);
+$typeid = $row['t.ID'];
+$pokemonID = $row['p.ID'];
+INSERT INTO Pokemon_Type (TYPE_ID,POKEMON_ID) VALUES ($typeId, $pokemonId);
+//$query2 = "INSERT INTO Pokemon_Type (TYPE_ID,POKEMON_ID) SELECT t.ID, p.ID from Pokemon p INNER JOIN Type t on pt.TYPE_ID = t.ID INNER JOIN Pokemon_Type pt on pt.POKEMON_ID = p.ID WHERE p.Name = :name AND t.TYPE = :type ";
+//$stmt2 = $db->prepare($query2);
 
-$stmt2->bindValue(":type", $type, PDO::PARAM_STR);
-$stmt2->execute();
+//$stmt2->bindValue(":type", $type, PDO::PARAM_STR);
+//$stmt2->execute();
 
 echo "got er done";
 header("Location: databasegrab.php");

@@ -99,33 +99,16 @@ width:250px;
 			echo    "<td>" . $row['Name'] . "</td>";
       echo    "<td>" . $row['pokedexNum'] . "</td>";
       echo    "<td>" . $row['TYPE'] . "</td>";
+			echo    "<form action=\"like.php\" method=\"POST\">";
 			echo    "<td> <input type=\"button\" class=\"btn btn-info\" value=\"I like this Pokemon\" id=\"Like\">  </td>";
+			echo    "</form>";
 			echo    "<td> <input type=\"button\" class=\"btn btn-danger\" value=\"I do not like this Pokemon\" id=\"notLike\"> </td>";
 			echo		"</tr>";
 
 
 		}
 
-		$("#Like").on('click', function(){
 
-    $.ajax({
-       url: 'like.php',
-       dataType: 'json',
-       success: function(data){
-            //data returned from php
-       }
-    });
-
-		$("#notLike").on('click', function(){
-
-    $.ajax({
-       url: 'liken.php',
-       dataType: 'json',
-       success: function(data){
-            //data returned from php
-       }
-    });
-)};
 
 		echo    "</tbody>";
 		echo    "</table>";

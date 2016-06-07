@@ -30,7 +30,7 @@ try {
 	echo $e;
 	die();
 }
- $name = htmlspecialchars($_POST['$row[Name]']);
+ $name = htmlspecialchars($_POST['$work']);
  $query = ("UPDATE Pokemon SET voteUps=voteUps+1 WHERE Name='$name'")
  $stmt = $db->prepare($query);
  $stmt->execute();

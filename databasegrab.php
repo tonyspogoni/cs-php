@@ -115,6 +115,7 @@ width:250px;
 		      <span class="caret"></span>
 		    </button>
 		    <ul class="dropdown-menu" role="menu">
+					<li><a href="http://php-tonyspogoni.rhcloud.com/databasegrab.php">Score</a></li>
 		      <li><a href="http://php-tonyspogoni.rhcloud.com/sortname.php">Name</a></li>
 		      <li><a href="http://php-tonyspogoni.rhcloud.com/sorttype.php">Type</a></li>
 					<li><a href="http://php-tonyspogoni.rhcloud.com/sortdex.php">Pokedex Number</a></li>

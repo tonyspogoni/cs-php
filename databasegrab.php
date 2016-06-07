@@ -84,6 +84,8 @@ width:250px;
 		echo  	"<th>Pokemon</th>";
 		echo  	"<th>Pokedex Number</th>";
 		echo  	"<th>Type</th>";
+		echo  	"<th>Vote Up</th>";
+		echo  	"<th>Vote Down</th>";
 		echo	 	"</tr>";
 		echo		"</thead>";
 		//foreach ($db->query('SELECT Name, pokedexNum FROM Pokemon') as $row)
@@ -97,6 +99,8 @@ width:250px;
 			echo    "<td>" . $row['Name'] . "</td>";
       echo    "<td>" . $row['pokedexNum'] . "</td>";
       echo    "<td>" . $row['TYPE'] . "</td>";
+			echo    "<td>" . <input type="button" class="btn btn-info" value="I like this Pokemon"> . "</td>";
+			echo    "<td>" . <input type="button" class="btn btn-danger" value="I do notlike this Pokemon"> . "</td>";
 			echo		"</tr>";
 
 

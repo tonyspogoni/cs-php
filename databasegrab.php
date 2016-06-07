@@ -100,7 +100,7 @@ width:250px;
       echo    "<td>" . $row['pokedexNum'] . "</td>";
       echo    "<td>" . $row['TYPE'] . "</td>";
 			echo    "<form action=\"like.php\" method=\"POST\">";
-			echo    "<td> <input type=\"submit\" class=\"btn btn-info\" value=\"I like this Pokemon\" id=\"Like\">  </td>";
+			echo    "<td> <input type=\"submit\" class=\"btn btn-info\" value=\"I like this Pokemon\" id=\"$row['Name']\">  </td>";
 			echo    "</form>";
 			echo    "<td> <input type=\"button\" class=\"btn btn-danger\" value=\"I do not like this Pokemon\" id=\"notLike\"> </td>";
 			echo		"</tr>";

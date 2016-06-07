@@ -30,7 +30,7 @@ try {
 	echo $e;
 	die();
 }
- $name = htmlspecialchars($_POST['Name']);
+ $name = htmlspecialchars($_POST['$row[Name]']);
  $this->db->query("UPDATE Pokemon SET voteUps=voteUps+1 WHERE Name='$name'".$this->db->escape($id)."'");
  header("Location: databasegrab.php");
  die("Page should have been redirected");

@@ -49,11 +49,14 @@ $stmt = $db->prepare($query);
 $stmt->bindValue(":name", $name, PDO::PARAM_STR);
 $stmt->bindValue(":pokedexNum", $pokedexNum, PDO::PARAM_INT);
 $stmt->execute();
-//$query2 = "INSERT INTO Type(TYPE) VALUES (:type)";
-$query2 = "SELECT * FROM Pokemon p JOIN Pokemon_Type pt ON p.ID = pt.POKEMON_ID JOIN Type t ON pt.TYPE_ID = t.ID; INSERT INTO pt(TYPE_ID) VALUES(t.ID) where t.TYPE = :type ";
+$query2 = "INSERT INTO Pokemon_Type(TYPE_ID) SELECT ID FROM Type WHERE TYPE = ':type'";
 $stmt2 = $db->prepare($query2);
 $stmt2->bindValue(":type", $type, PDO::PARAM_STR);
 $stmt2->execute();
+$query3 = "INSERT INTO Pokemon_Type(POKEMON_ID) SELECT ID FROM Pokemon WHERE name = ':namee'";
+$stmt3 = $db->prepare($query2);
+$stmt3->bindValue(":name", $name, PDO::PARAM_STR);
+$stmt3->execute();
 
 echo "got er done";
 header("Location: databasegrab.php");

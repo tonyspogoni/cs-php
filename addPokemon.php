@@ -61,8 +61,8 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 $typeid = $row['t.ID'];
 $pokemonID = $row['p.ID'];
 $query = "INSERT INTO Pokemon_Type (TYPE_ID,POKEMON_ID) VALUES ($typeId, $pokemonId)";
-$db->query($query);
-
+$stmt = $db->query($query);
+$stmt->execute();
 //$query2 = "INSERT INTO Pokemon_Type (TYPE_ID,POKEMON_ID) SELECT t.ID, p.ID from Pokemon p INNER JOIN Type t on pt.TYPE_ID = t.ID INNER JOIN Pokemon_Type pt on pt.POKEMON_ID = p.ID WHERE p.Name = :name AND t.TYPE = :type ";
 //$stmt2 = $db->prepare($query2);
 

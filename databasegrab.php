@@ -40,7 +40,12 @@ try {
 <!DOCTYPE html>
 <html>
 <head>
-
+<style>
+form {
+margin: 0 auto;
+width:250px;
+}
+</style>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">

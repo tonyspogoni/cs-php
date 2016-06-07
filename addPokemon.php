@@ -50,7 +50,7 @@ $stmt->bindValue(":name", $name, PDO::PARAM_STR);
 $stmt->bindValue(":pokedexNum", $pokedexNum, PDO::PARAM_INT);
 //$stmt->bindValue(":type", $type, PDO::PARAM_STR);
 $stmt->execute();
-$query2 = "INSERT INTO Pokemon_Type (TYPE_ID,POKEMON_ID) SELECT t.ID, p.ID from Pokemon p INNER JOIN Type t on pt.TYPE_ID = t.ID INNER JOIN Pokemon_Type pt on pt.POKEMON_ID = p.ID WHERE p.Name = :name AND t.TYPE = :type ";
+$query2 = "INSERT INTO Pokemon_Type (TYPE_ID,POKEMON_ID) SELECT t.ID, p.ID from Pokemon p INNER JOIN Type t on pt.TYPE_ID = t.ID INNER JOIN Pokemon_Type pt on pt.POKEMON_ID = p.ID WHERE p.Name = ':name' AND t.TYPE = ':type' ";
 $stmt2 = $db->prepare($query);
 
 $stmt2->bindValue(":type", $type, PDO::PARAM_STR);

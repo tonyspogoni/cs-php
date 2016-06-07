@@ -44,9 +44,9 @@ try {
 $name = htmlspecialchars($_POST['name']);
 $type = htmlspecialchars($_POST['type']);
 $pokedexNum = htmlspecialchars($_POST['pokedexNum']);
-$query = "INSERT INTO Pokemon(Name, pokedexNum) VALUES (:name, :pokedexNum)";
-$query2 = "INSERT INTO Pokemon_Type(TYPE_ID,POKEMON_ID) SELECT	(SELECT ID FROM Type WHERE TYPE = :type) SELECT (ID FROM Pokemon WHERE Name = :name )";
-$stmt = $db->prepare($query; $query2);
+$query = "INSERT INTO Pokemon(Name, pokedexNum) VALUES (:name, :pokedexNum)"; "INSERT INTO Pokemon_Type(TYPE_ID,POKEMON_ID) SELECT	(SELECT ID FROM Type WHERE TYPE = :type) SELECT (ID FROM Pokemon WHERE Name = :name) ";
+//$query2 = "INSERT INTO Pokemon_Type(TYPE_ID,POKEMON_ID) SELECT	(SELECT ID FROM Type WHERE TYPE = :type) SELECT (ID FROM Pokemon WHERE Name = :name )";
+$stmt = $db->prepare($query);
 $stmt->nextRowset();
 $stmt->bindValue(":name", $name, PDO::PARAM_STR);
 $stmt->bindValue(":pokedexNum", $pokedexNum, PDO::PARAM_INT);

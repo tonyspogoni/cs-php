@@ -54,6 +54,8 @@ $query = "SELECT t.ID, p.ID from Pokemon p
 INNER JOIN Type t on pt.POKEMON_TYPE = t.ID
 INNER JOIN Pokemon_Type pt on pt.POKEMON_ID = t.ID
 WHERE t.TYPE = :type AND  p.Name = :name";
+$stmt->bindValue(":name", $name, PDO::PARAM_STR);
+$stmt->bindValue(":type", $type, PDO::PARAM_STR);
 $stmt = $db->query($query);
 $row = $stmt->fetch(PDO::FETCH_ASSOC);
 $typeid = $row['t.ID'];
